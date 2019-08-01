@@ -1,0 +1,5 @@
+target/
+target_custom/
+target_n
+.idea/
+*.log
