@@ -80,8 +80,6 @@ object KafkaConsumer {
     Flow[CommittableMessage[String, String]]
       .map { msg: CommittableMessage[String, String] => {
         val messageValue = msg.record.value
-        println(s"message: $msg")
-        println(messageValue.parseJson)
 
         (msg.committableOffset, messageValue.parseJson.convertTo[Book])
       }
