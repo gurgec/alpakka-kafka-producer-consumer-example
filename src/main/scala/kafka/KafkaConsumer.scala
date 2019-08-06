@@ -45,7 +45,6 @@ object KafkaConsumer {
     ConsumerSettings(actorSystem, new StringDeserializer, new StringDeserializer)
       .withBootstrapServers(bootstrapServer)
       .withGroupId(groupId)
-      .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest")
 
   def runConsumer: Consumer.Control ={
 
